@@ -22753,6 +22753,7 @@ MonoBehaviour:
   player: {fileID: 1697399241}
   goal: {fileID: 1895105016}
   winDistance: 5
+  NextLevel: MainMenu
   hasWon: 0
 --- !u!1 &1900332141 stripped
 GameObject:

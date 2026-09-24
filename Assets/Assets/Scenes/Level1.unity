@@ -5493,7 +5493,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 195519592}
   m_Father: {fileID: 2020175438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -6252,16 +6253,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 195519591}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2020175438}
+  m_Father: {fileID: 169551711}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 477.8545, y: 494}
+  m_AnchoredPosition: {x: -2.1455078, y: 79.349976}
   m_SizeDelta: {x: 893.709, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &195519593
@@ -61458,7 +61459,6 @@ RectTransform:
   - {fileID: 1321060127}
   - {fileID: 89603490}
   - {fileID: 169551711}
-  - {fileID: 195519592}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -62051,6 +62051,7 @@ MonoBehaviour:
   player: {fileID: 1628162611}
   winSpot: {fileID: 2049696105}
   winUI: {fileID: 984289486}
+  NextLevel: Level2
 --- !u!64 &2049696102
 MeshCollider:
   m_ObjectHideFlags: 0

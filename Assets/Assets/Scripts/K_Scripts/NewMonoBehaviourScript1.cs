@@ -1,10 +1,16 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class WinCondition : MonoBehaviour
 {
     public Transform player;
     public Transform goal;
     public float winDistance = 1.5f;
+
+    //hi its me aurora adding in that scene loader >:D
+
+    public string NextLevel;
 
     public bool hasWon = false;
 
@@ -24,5 +30,6 @@ public class WinCondition : MonoBehaviour
     void WinGame()
     {
         Debug.Log("You Win!");
+        SceneManager.LoadScene(NextLevel);
     }
 }

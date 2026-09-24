@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class winCondition : MonoBehaviour
 {   
@@ -6,6 +7,8 @@ public class winCondition : MonoBehaviour
     public Transform winSpot;
     public GameObject winUI;
     private float winDistance = 1.5f;
+
+    public string NextLevel;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,7 +27,8 @@ public class winCondition : MonoBehaviour
 
     void YouWin()
     {
-        winUI.SetActive(true);
+        //winUI.SetActive(true);
+        SceneManager.LoadScene(NextLevel);
     }
 }
 
