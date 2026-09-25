@@ -60,9 +60,10 @@ public class Teleport : MonoBehaviour
             warpVFX.SetActive(true);
         }
 
-        if (canWarp != true)
+        if (canWarp == false)
         {
             warpVFX.SetActive(false);
+            
         }
 
         if (justWarped == true)
@@ -73,6 +74,8 @@ public class Teleport : MonoBehaviour
         if (justWarped == true && Timer <= 0.0f)
         {
             teleportedVFX.SetActive(false);
+            openedBookUI.SetActive(false);
+            closedBookUI.SetActive(true);
         }
 
         if (Timer <= 0.0f)

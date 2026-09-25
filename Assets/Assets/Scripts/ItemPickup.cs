@@ -70,6 +70,15 @@ public class ItemPickup : MonoBehaviour
     public GameObject Key5Slot;
     public GameObject Key6Slot;
 
+    //stop replaying audio when in area fix: setup a bool that will not let the thing happen again
+
+    public bool alreadyCollected1;
+    public bool alreadyCollected2;
+    public bool alreadyCollected3;
+    public bool alreadyCollected4;
+    public bool alreadyCollected5;
+    public bool alreadyCollected6;
+
     // bc u will forget: keys 1-3 open the win condition door at the start
     //keys 1-3 are their own deal
 
@@ -100,6 +109,14 @@ public class ItemPickup : MonoBehaviour
         Key4Slot.SetActive(true);
         Key5Slot.SetActive(true);
         Key6Slot.SetActive(true);
+
+        //player hasn't gotten any keys yet
+        alreadyCollected1 = false;
+        alreadyCollected2 = false;
+        alreadyCollected3 = false;
+        alreadyCollected4 = false;
+        alreadyCollected5 = false;
+        alreadyCollected6 = false;
     }
 
     // Update is called once per frame
@@ -204,56 +221,81 @@ public class ItemPickup : MonoBehaviour
 
     //grabbing each key sets certain UI and bools off its matched by number u get it
     void ItemGrab1()
-    {
-        DoorKey1.SetActive(false);
-        Key1UI.SetActive(true);
-        //play audio
-        sourceAudio = GetComponent<AudioSource>();
-        sourceAudio.PlayOneShot(keyPickUpSFX);
+    {   
+        if (alreadyCollected1 == false)
+        {
+            DoorKey1.SetActive(false);
+            Key1UI.SetActive(true);
+            //play audio
+            sourceAudio = GetComponent<AudioSource>();
+            sourceAudio.PlayOneShot(keyPickUpSFX);
+            //got the key
+            alreadyCollected1 = true;
+        }
     }
     void ItemGrab2()
-    {
-        DoorKey2.SetActive(false);
-        Key2UI.SetActive(true);
-        //play audio
-        sourceAudio = GetComponent<AudioSource>();
-        sourceAudio.PlayOneShot(keyPickUpSFX);
-
+    {   
+        if (alreadyCollected2 == false)
+        {
+            DoorKey2.SetActive(false);
+            Key2UI.SetActive(true);
+            //play audio
+            sourceAudio = GetComponent<AudioSource>();
+            sourceAudio.PlayOneShot(keyPickUpSFX);
+            //got the key
+            alreadyCollected2 = true;
+        }
     }
     void ItemGrab3()
-    {
-        DoorKey3.SetActive(false);
-        Key3UI.SetActive(true);
-        //play audio
-        sourceAudio = GetComponent<AudioSource>();
-        sourceAudio.PlayOneShot(keyPickUpSFX);
-
+    {   
+        if (alreadyCollected3 == false)
+        {
+            DoorKey3.SetActive(false);
+            Key3UI.SetActive(true);
+            //play audio
+            sourceAudio = GetComponent<AudioSource>();
+            sourceAudio.PlayOneShot(keyPickUpSFX);
+            //got the key
+            alreadyCollected3 = true;
+        }
     }
     void ItemGrab4()
     {
-        DoorKey4.SetActive(false);
-        Key4UI.SetActive(true);
-        //play audio
-        sourceAudio = GetComponent<AudioSource>();
-        sourceAudio.PlayOneShot(keyPickUpSFX);
-
+       if (alreadyCollected4 == false)
+       {
+            DoorKey4.SetActive(false);
+            Key4UI.SetActive(true);
+            //play audio
+            sourceAudio = GetComponent<AudioSource>();
+            sourceAudio.PlayOneShot(keyPickUpSFX);
+            //got the key
+            alreadyCollected4 = true;
+       }
     }
     void ItemGrab5()
-    {
-        DoorKey5.SetActive(false);
-        Key5UI.SetActive(true);
-        //play audio
-        sourceAudio = GetComponent<AudioSource>();
-        sourceAudio.PlayOneShot(keyPickUpSFX);
-
+    {   
+        if (alreadyCollected5 == false)
+        {
+            DoorKey5.SetActive(false);
+            Key5UI.SetActive(true);
+            //play audio
+            sourceAudio = GetComponent<AudioSource>();
+            sourceAudio.PlayOneShot(keyPickUpSFX);
+            //got the key
+            alreadyCollected5 = true;
+        }
     }
     void ItemGrab6()
-    {
-        DoorKey6.SetActive(false);
-        Key6UI.SetActive(true);
-        //play audio
-        sourceAudio = GetComponent<AudioSource>();
-        sourceAudio.PlayOneShot(keyPickUpSFX);
-
+    {   
+        if (alreadyCollected6 == false)
+        {
+            DoorKey6.SetActive(false);
+            Key6UI.SetActive(true);
+            //play audio
+            sourceAudio = GetComponent<AudioSource>();
+            sourceAudio.PlayOneShot(keyPickUpSFX);
+            //got the key
+            alreadyCollected6 = true;
+        }
     }
 }
