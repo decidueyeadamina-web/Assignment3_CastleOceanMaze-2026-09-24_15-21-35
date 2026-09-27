@@ -28,6 +28,9 @@ public class Teleport : MonoBehaviour
     public GameObject openedBookUI;
     public GameObject closedBookUI;
 
+    //teleport UI
+    public GameObject TeleportUI; 
+
     void Start()
     {
         canWarp = false;
@@ -37,6 +40,8 @@ public class Teleport : MonoBehaviour
 
         openedBookUI.SetActive(false);
         closedBookUI.SetActive(true);
+
+        //TeleportUI.SetActive(false);
 
     }
 
@@ -53,16 +58,22 @@ public class Teleport : MonoBehaviour
 
             openedBookUI.SetActive(true);
             closedBookUI.SetActive(false);
+            
+            //teleport instructions UI
+            TeleportUI.SetActive(true);
+
         }
 
         if (canWarp == true)
         {
             warpVFX.SetActive(true);
+            
         }
 
         if (canWarp == false)
         {
             warpVFX.SetActive(false);
+            //TeleportUI.SetActive(false);
             
         }
 
@@ -96,6 +107,10 @@ public class Teleport : MonoBehaviour
             // teleport UI
             openedBookUI.SetActive(false);
             closedBookUI.SetActive(true);
+
+            //more teleport UI (specifically how to warp)
+            TeleportUI.SetActive(false);
+
         }
     }
 
