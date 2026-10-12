@@ -32,7 +32,7 @@ public class spriteController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         if (spriteRenderer.sprite == null) 
-        spriteRenderer.sprite = standingSprite; 
+        {spriteRenderer.sprite = standingSprite;} 
 
         warpSpot = false;
     }
